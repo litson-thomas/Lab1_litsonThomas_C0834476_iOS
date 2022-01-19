@@ -13,10 +13,12 @@
 		CFF4A3A02797465E00C8F5AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF4A39E2797465E00C8F5AB /* Main.storyboard */; };
 		CFF4A3A22797466000C8F5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF4A3A12797466000C8F5AB /* Assets.xcassets */; };
 		CFF4A3A52797466000C8F5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF4A3A32797466000C8F5AB /* LaunchScreen.storyboard */; };
+		CFF4A3AD279755FB00C8F5AB /* styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF4A3AC279755FB00C8F5AB /* styles.swift */; };
+		CFF4A3B127978F7E00C8F5AB /* TacToe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF4A3B027978F7E00C8F5AB /* TacToe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CFF4A3952797465E00C8F5AB /* iOS_advanced_labTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_advanced_labTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF4A3952797465E00C8F5AB /* Lab1_litsonThomas_C0834476_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1_litsonThomas_C0834476_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF4A3982797465E00C8F5AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF4A39A2797465E00C8F5AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CFF4A39C2797465E00C8F5AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		CFF4A3A12797466000C8F5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF4A3A42797466000C8F5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFF4A3A62797466000C8F5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFF4A3AC279755FB00C8F5AB /* styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = styles.swift; sourceTree = "<group>"; };
+		CFF4A3B027978F7E00C8F5AB /* TacToe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TacToe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,7 @@
 		CFF4A3962797465E00C8F5AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CFF4A3952797465E00C8F5AB /* iOS_advanced_labTest1.app */,
+				CFF4A3952797465E00C8F5AB /* Lab1_litsonThomas_C0834476_iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +67,8 @@
 				CFF4A3A12797466000C8F5AB /* Assets.xcassets */,
 				CFF4A3A32797466000C8F5AB /* LaunchScreen.storyboard */,
 				CFF4A3A62797466000C8F5AB /* Info.plist */,
+				CFF4A3AC279755FB00C8F5AB /* styles.swift */,
+				CFF4A3B027978F7E00C8F5AB /* TacToe.swift */,
 			);
 			path = iOS_advanced_labTest1;
 			sourceTree = "<group>";
@@ -70,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CFF4A3942797465E00C8F5AB /* iOS_advanced_labTest1 */ = {
+		CFF4A3942797465E00C8F5AB /* Lab1_litsonThomas_C0834476_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFF4A3A92797466000C8F5AB /* Build configuration list for PBXNativeTarget "iOS_advanced_labTest1" */;
+			buildConfigurationList = CFF4A3A92797466000C8F5AB /* Build configuration list for PBXNativeTarget "Lab1_litsonThomas_C0834476_iOS" */;
 			buildPhases = (
 				CFF4A3912797465E00C8F5AB /* Sources */,
 				CFF4A3922797465E00C8F5AB /* Frameworks */,
@@ -82,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = iOS_advanced_labTest1;
+			name = Lab1_litsonThomas_C0834476_iOS;
 			productName = iOS_advanced_labTest1;
-			productReference = CFF4A3952797465E00C8F5AB /* iOS_advanced_labTest1.app */;
+			productReference = CFF4A3952797465E00C8F5AB /* Lab1_litsonThomas_C0834476_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CFF4A3902797465E00C8F5AB /* Build configuration list for PBXProject "iOS_advanced_labTest1" */;
+			buildConfigurationList = CFF4A3902797465E00C8F5AB /* Build configuration list for PBXProject "Lab1_litsonThomas_C0834476_iOS" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CFF4A3942797465E00C8F5AB /* iOS_advanced_labTest1 */,
+				CFF4A3942797465E00C8F5AB /* Lab1_litsonThomas_C0834476_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -140,7 +146,9 @@
 			files = (
 				CFF4A39D2797465E00C8F5AB /* ViewController.swift in Sources */,
 				CFF4A3992797465E00C8F5AB /* AppDelegate.swift in Sources */,
+				CFF4A3B127978F7E00C8F5AB /* TacToe.swift in Sources */,
 				CFF4A39B2797465E00C8F5AB /* SceneDelegate.swift in Sources */,
+				CFF4A3AD279755FB00C8F5AB /* styles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +299,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_advanced_labTest1/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lab1_litsonThomas_C0834476_iOS;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_advanced_labTest1/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lab1_litsonThomas_C0834476_iOS;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CFF4A3902797465E00C8F5AB /* Build configuration list for PBXProject "iOS_advanced_labTest1" */ = {
+		CFF4A3902797465E00C8F5AB /* Build configuration list for PBXProject "Lab1_litsonThomas_C0834476_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFF4A3A72797466000C8F5AB /* Debug */,
@@ -348,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFF4A3A92797466000C8F5AB /* Build configuration list for PBXNativeTarget "iOS_advanced_labTest1" */ = {
+		CFF4A3A92797466000C8F5AB /* Build configuration list for PBXNativeTarget "Lab1_litsonThomas_C0834476_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFF4A3AA2797466000C8F5AB /* Debug */,
