@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFC90496279F696E00709A1D /* TacToeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFC90494279F696E00709A1D /* TacToeModel.xcdatamodeld */; };
 		CFF4A3992797465E00C8F5AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF4A3982797465E00C8F5AB /* AppDelegate.swift */; };
 		CFF4A39B2797465E00C8F5AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF4A39A2797465E00C8F5AB /* SceneDelegate.swift */; };
 		CFF4A39D2797465E00C8F5AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF4A39C2797465E00C8F5AB /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CFC90495279F696E00709A1D /* TacToeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TacToeModel.xcdatamodel; sourceTree = "<group>"; };
 		CFF4A3952797465E00C8F5AB /* Lab1_litsonThomas_C0834476_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1_litsonThomas_C0834476_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF4A3982797465E00C8F5AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF4A39A2797465E00C8F5AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				CFF4A3A62797466000C8F5AB /* Info.plist */,
 				CFF4A3AC279755FB00C8F5AB /* styles.swift */,
 				CFF4A3B027978F7E00C8F5AB /* TacToe.swift */,
+				CFC90494279F696E00709A1D /* TacToeModel.xcdatamodeld */,
 			);
 			path = iOS_advanced_labTest1;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				CFF4A39D2797465E00C8F5AB /* ViewController.swift in Sources */,
 				CFF4A3992797465E00C8F5AB /* AppDelegate.swift in Sources */,
 				CFF4A3B127978F7E00C8F5AB /* TacToe.swift in Sources */,
+				CFC90496279F696E00709A1D /* TacToeModel.xcdatamodeld in Sources */,
 				CFF4A39B2797465E00C8F5AB /* SceneDelegate.swift in Sources */,
 				CFF4A3AD279755FB00C8F5AB /* styles.swift in Sources */,
 			);
@@ -368,6 +372,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CFC90494279F696E00709A1D /* TacToeModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CFC90495279F696E00709A1D /* TacToeModel.xcdatamodel */,
+			);
+			currentVersion = CFC90495279F696E00709A1D /* TacToeModel.xcdatamodel */;
+			path = TacToeModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CFF4A38D2797465E00C8F5AB /* Project object */;
 }

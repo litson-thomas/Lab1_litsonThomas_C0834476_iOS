@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import CoreData
+
+var slots = ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"]
 
 class ViewController: UIViewController {
     
@@ -24,7 +27,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var c2: UIButton!
     @IBOutlet weak var c3: UIButton!
     var buttons = [UIButton]();
+    
     var tac_toe = TacToe(player: Turn.X, value: "O", x_score: 0, o_score: 0)
+    // get the context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +45,28 @@ class ViewController: UIViewController {
         tac_toe.reset_tiles()
         // initiate the swipe gestures
         initSwipeGestures()
+        // connect the core data module
+        tac_toe.initialize_core_data(context: context)
+        update_score() // update the score as soon as the core data is initialized
+        player_turn_text.text = tac_toe.get_player_turn_text() // also update the turn for the player 
+        // shake gesture
+        self.becomeFirstResponder()
+    }
+    
+    // We are willing to become first responder to get shake motion
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+
+    // Enable detection of shake motion
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            tac_toe.undo_move()
+            player_turn_text.text = tac_toe.get_player_turn_text()
+            tac_toe.update_core_data(context: context)
+        }
     }
     
     // method to initialize the gesture to enable the gesture to reset the game if a gesture is triggered!
@@ -81,6 +109,7 @@ class ViewController: UIViewController {
         tac_toe.set_player_o_score(score: 0)
         tac_toe.set_player_x_score(score: 0)
         update_score()
+        tac_toe.reset_core_data(context: context)
     }
     
     @IBAction func buttonClick(_ sender: UIButton) {
@@ -88,11 +117,14 @@ class ViewController: UIViewController {
             if(winner_text.text != "") {
                 winner_text.text = ""
             }
+            // update the selected slot string value
+            tac_toe.set_selected_slot(slot: sender.tag)
             sender.setBackgroundImage(tac_toe.get_player_image(), for: .normal)
             player_turn_text.text = tac_toe.get_player_turn_text()
             tac_toe.check_game_completion()
             winner_text.text = tac_toe.get_winner_text()
             update_score()
+            tac_toe.update_core_data(context: context)
         }
     }
     
