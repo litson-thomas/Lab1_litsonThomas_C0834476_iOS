@@ -10,11 +10,14 @@
         <attribute name="c1" optional="YES" attributeType="String"/>
         <attribute name="c2" optional="YES" attributeType="String"/>
         <attribute name="c3" optional="YES" attributeType="String"/>
+        <attribute name="can_o_undo" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="can_x_undo" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="current_turn" optional="YES" attributeType="String"/>
         <attribute name="player_o_score" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="player_x_score" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="selected_slot" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="TacToeGame" positionX="-54" positionY="-9" width="128" height="209"/>
+        <element name="TacToeGame" positionX="-54" positionY="-9" width="128" height="254"/>
     </elements>
 </model>

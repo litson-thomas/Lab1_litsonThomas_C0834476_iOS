@@ -69,6 +69,9 @@ class TacToe {
                 buttons[6].setBackgroundImage(UIImage.init(named: data.value(forKey: "c1") as! String), for: .normal);
                 buttons[7].setBackgroundImage(UIImage.init(named: data.value(forKey: "c2") as! String), for: .normal);
                 buttons[8].setBackgroundImage(UIImage.init(named: data.value(forKey: "c3") as! String), for: .normal);
+                can_player_x_undo = data.value(forKey: "can_x_undo") as! Bool
+                can_player_o_undo = data.value(forKey: "can_o_undo") as! Bool
+                selected_slot = data.value(forKey: "selected_slot") as! Int
             }
         }
         catch{
@@ -104,6 +107,9 @@ class TacToe {
                 data.setValue(get_button_name(btn: buttons[6]), forKey: "c1")
                 data.setValue(get_button_name(btn: buttons[7]), forKey: "c2")
                 data.setValue(get_button_name(btn: buttons[8]), forKey: "c3")
+                data.setValue(can_player_x_undo, forKey: "can_x_undo")
+                data.setValue(can_player_o_undo, forKey: "can_o_undo")
+                data.setValue(selected_slot, forKey: "selected_slot")
             }
             do{
                 try context.save()
@@ -144,6 +150,9 @@ class TacToe {
         game_details.setValue("blank", forKey: "c1")
         game_details.setValue("blank", forKey: "c2")
         game_details.setValue("blank", forKey: "c3")
+        game_details.setValue(false, forKey: "can_x_undo")
+        game_details.setValue(false, forKey: "can_o_undo")
+        game_details.setValue(-1, forKey: "selected_slot")
         do{
             try context.save()
         }
@@ -166,14 +175,17 @@ class TacToe {
     
     // method to undo the move
     func undo_move(){
-        if(current_player == Turn.O){
+        print(current_player)
+        print(can_player_x_undo)
+        print(can_player_o_undo)
+        if(current_player == Turn.O && can_player_o_undo == true){
             current_player = Turn.X
             current_player_text = "X"
             can_player_x_undo = false
             set_slot_blank()
             return
         }
-        if(current_player == Turn.X){
+        if(current_player == Turn.X && can_player_x_undo == true){
             current_player = Turn.O
             current_player_text = "O"
             can_player_o_undo = false
